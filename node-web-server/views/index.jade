@@ -1,0 +1,26 @@
+extends layout
+
+block content
+
+  h1 Internet Of Things
+  h2 Input test
+  hr
+  p
+    | The bar below represents the realtime value of a potentionmeter on arduino.
+
+  div.pot
+    canvas#pot-bar
+
+  h2 Output test
+  hr
+  p
+    | If your on a mobile device that supports HTML5 deviceOrientation api then your controlling a servo motor on the arduino. By tilting your phone front and back the servo motor moves a carboard plane to the according angle as your phone is tilted.
+  p
+    | The last person connected has the ability to control the device.
+  p Status: 
+    span.servo-status Interacting
+
+block javascripts
+  script(src="javascripts/socket.io.min.js")
+  script(src="javascripts/jquery.min.js")
+  script(src="javascripts/site.min.js")
